@@ -9,7 +9,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'This is simply a test', 'https://live.staticflickr.com/65535/51129079431_9ec756feb6_b.jpg'),
-    new Recipe('A Test Recipe 2', 'This is simply a test 2', 'https://live.staticflickr.com/65535/51129079431_9ec756feb6_b.jpg')
+    new Recipe('A Test Recipe 2', 'Another Test Recipe', 'https://www.maxpixel.net/static/photo/1x/Home-Recipes-Cuisine-Cooking-How-To-Cook-5774553.jpg')
   ];
   @Output() recipeItemSelected = new EventEmitter<Recipe>();
   constructor() { }
