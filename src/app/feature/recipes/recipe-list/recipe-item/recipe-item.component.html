@@ -1,12 +1,11 @@
-<a class="list-group" (click)="onSelectRecipe()" style="cursor: pointer;">
-    <li class="d-flex list-group-item">
+<a class="list-group-item" [routerLink]="[index]" routerLinkActive="active" style="cursor: pointer;">
+    <div class="d-flex ">
         <div class="float-start">
             <h4 class="">{{recipe.name}}</h4>
             <p class="">{{recipe.description}}</p>
         </div>
-        <span class="d-flex align-items-center ms-auto">
-            <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="rounded float-end"
-                style="max-height: 100px; max-width: 100px;" />
-        </span>
-    </li>
+        <div class="d-flex align-items-center ms-auto">
+            <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="rounded float-end" style="max-height: 100px; max-width: 100px;" />
+        </div>
+    </div>
 </a>

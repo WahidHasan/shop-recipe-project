@@ -8,7 +8,8 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input() recipe: Recipe = {name:'', description: '', imagePath:''};
+  @Input() recipe!: Recipe;
+  @Input() index!: number;
 
   constructor(private recipeservice: RecipeService) { }
 
