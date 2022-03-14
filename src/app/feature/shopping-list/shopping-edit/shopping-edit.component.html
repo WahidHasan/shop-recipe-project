@@ -1,19 +1,19 @@
 <div class="row">
     <div class="col-12">
-        <form>
+        <form (ngSubmit)="onAddItem(formData)" #formData="ngForm">
             <div class="row pb-2">
                 <div class="col-sm-5 form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" #nameInput>
+                    <input type="text" class="form-control" id="name" name="name" ngModel>
                 </div>
                 <div class="col-sm-2 form-group">
                     <label for="amount">Amount</label>
-                    <input type="number" class="form-control" id="amount" #amountInput>
+                    <input type="number" class="form-control" id="amount" name="amount" ngModel>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button class="btn btn-success me-2" type="button" (click)="onAddItem()">
+                    <button class="btn btn-success me-2" type="submit">
                         Add
                     </button>
                     <button class="btn btn-danger me-2" type="submit">
