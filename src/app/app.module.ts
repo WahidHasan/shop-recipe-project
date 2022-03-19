@@ -16,6 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipeStartComponent } from './feature/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './feature/recipes/recipe-edit/recipe-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './common/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +32,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [RecipeService, ShoppingListService],
   bootstrap: [AppComponent]
