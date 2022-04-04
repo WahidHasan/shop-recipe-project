@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, throwError } from "rxjs";
+import { environment } from "src/environments/environment";
 
 interface AuthResponseData {
     kind:string;
@@ -17,7 +18,7 @@ interface AuthResponseData {
 export class AuthService {
     constructor(private http: HttpClient){}
     signup(email: string, password: string){
-      return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCuXbMC299c3HwBFo2gLJ-Z9i_hoZKDUw8',
+      return this.http.post<AuthResponseData>(environment.FIREBASE_URL,
         {
             email: email,
             password: password,
