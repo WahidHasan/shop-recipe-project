@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  FIREBASE_URL: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCuXbMC299c3HwBFo2gLJ-Z9i_hoZKDUw8"
+  firebaseAPIKey: 'AIzaSyCuXbMC299c3HwBFo2gLJ-Z9i_hoZKDUw8'
 };
 
 /*

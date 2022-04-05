@@ -18,7 +18,7 @@ interface AuthResponseData {
 export class AuthService {
     constructor(private http: HttpClient){}
     signup(email: string, password: string){
-      return this.http.post<AuthResponseData>(environment.FIREBASE_URL,
+      return this.http.post<AuthResponseData>("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + environment.firebaseAPIKey,
         {
             email: email,
             password: password,
